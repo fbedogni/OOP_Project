@@ -9,6 +9,7 @@ public class Utils {
 	public static int index = 14; // 14 è la posizione della prima lettera del nome del prodotto
 	public static int KEYBOARD = 0;
 	
+	/*
 	public String getTotal (DefaultListModel<String> DLM)
 	{
 		
@@ -21,6 +22,7 @@ public class Utils {
 		
 		return cost;
 	}
+	*/
 	
 	public boolean isActive (String tableNumber)
 	{
@@ -112,7 +114,7 @@ public class Utils {
 			for (int y=i+1; y<DLM.getSize(); ++y)
 				if (DLM.elementAt(y).contains(name))
 				{
-					counter++;
+					counter += this.getNumDLM(DLM.elementAt(y));
 					DLM.remove(y);
 					y--;
 				}
