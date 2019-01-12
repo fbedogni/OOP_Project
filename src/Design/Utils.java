@@ -9,20 +9,24 @@ public class Utils {
 	public static int index = 14; // 14 è la posizione della prima lettera del nome del prodotto
 	public static int KEYBOARD = 0;
 	
-	/*
+	
 	public String getTotal (DefaultListModel<String> DLM)
 	{
-		
-		String cost="";
+		String c="0.0";
+		double cost=0;
 		
 		for (int i=0; i < DLM.size(); ++i)
 		{
-			
+			cost += Double.parseDouble(this.getCost(DLM.elementAt(i)));
 		}
 		
-		return cost;
+		c = String.valueOf(cost);
+		
+		System.out.println (c);
+		
+		return c;
 	}
-	*/
+	
 	
 	public boolean isActive (String tableNumber)
 	{
@@ -115,14 +119,7 @@ public class Utils {
 			
 			// estraggo il costo della stringa e faccio diviso counter per ottenere il costo unitario
 			
-			
-			for (int z=35; z<DLM.elementAt(i).length(); ++z)
-			{
-				if (Character.isDigit(DLM.elementAt(i).charAt(z)) || DLM.elementAt(i).charAt(z) == '.')
-					c += DLM.elementAt(i).charAt(z);
-			}
-
-			
+			c = this.getCost (DLM.elementAt(i));
 			cost = Double.parseDouble(c)/counter;
 			
 			for (int y=i+1; y<DLM.getSize(); ++y)
@@ -141,6 +138,19 @@ public class Utils {
 		}
 	}
 	
+	private String getCost(String string) {
+		
+		String c = "";
+		
+		for (int z=35; z<string.length(); ++z)
+		{
+			if (Character.isDigit(string.charAt(z)) || string.charAt(z) == '.')
+				c += string.charAt(z);
+		}
+		return c;
+	}
+
+
 	public void setRowDLM (int counter, String string, DefaultListModel<String> DLM, double cost)
 	{
 		if (counter < 10)

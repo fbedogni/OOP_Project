@@ -1447,7 +1447,8 @@ public class PanelBuilder {
 		
 		//new Utils().getTotal(DLM)
 		
-		JLabel label_1 = new JLabel("200");
+		String total = new Utils().getTotal(DLM);
+		JLabel label_1 = new JLabel(total);
 		//label_1.setText();
 		// per impostare il testo della label mi serve un metodo che calcoli il costo totale degli elementi presenti nella lista_ordini
 		label_1.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 28));
