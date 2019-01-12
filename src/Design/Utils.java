@@ -102,6 +102,8 @@ public class Utils {
 		
 		// non considera l'eventualità che in una riga successiva alla prima il numero di elementi possa essere diverso da uno 
 		int counter;
+		double cost;
+		String c = "";
 		StringBuilder name;
 		String substring;
 		
@@ -110,6 +112,18 @@ public class Utils {
 			
 			counter = this.getNumDLM(DLM.elementAt(i));
 			name = new StringBuilder (this.getNameDLM(DLM.elementAt(i), DLM.elementAt(i).length()));
+			
+			// estraggo il costo della stringa e faccio diviso counter per ottenere il costo unitario
+			
+			
+			for (int z=35; z<DLM.elementAt(i).length(); ++z)
+			{
+				if (Character.isDigit(DLM.elementAt(i).charAt(z)) || DLM.elementAt(i).charAt(z) == '.')
+					c += DLM.elementAt(i).charAt(z);
+			}
+
+			
+			cost = Double.parseDouble(c)/counter;
 			
 			for (int y=i+1; y<DLM.getSize(); ++y)
 				if (DLM.elementAt(y).contains(name))
@@ -122,7 +136,8 @@ public class Utils {
 			substring = DLM.elementAt(i).substring(index);
 			
 			DLM.remove(i);
-			this.setRowDLM(counter, substring, DLM, i);
+			cost *= counter;
+			this.setRowDLM(counter, substring, DLM, cost, i);
 		}
 	}
 	
@@ -136,13 +151,23 @@ public class Utils {
 			DLM.addElement("   " + counter + "        " + string + this.DLMSpaces(string) + cost);
 	}
 	
-	public void setRowDLM (int counter, String string, DefaultListModel<String> DLM, int position)
+	public void setRowDLM (int counter, String string, DefaultListModel<String> DLM, double cost, int position)
 	{
+		String name = "";
+		
+		for (int i=0; i<string.length(); ++i)
+		{
+			if (string.charAt(i) == ' ' && string.charAt(i+1) == ' ')
+				break;
+			name += string.charAt(i);
+		}
+		
+			
 		if (counter < 10)
-			DLM.add(position, "     " + counter + "        " + string);
+			DLM.add(position, "     " + counter + "        " + name + this.DLMSpaces(name) + cost);
 		else if (counter < 100)
-			DLM.add(position, "    " + counter + "        " + string);
+			DLM.add(position, "    " + counter + "        " + name + this.DLMSpaces(name) + cost);
 		else
-			DLM.add(position, "   " + counter + "        " + string);
+			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
 	}
 }
