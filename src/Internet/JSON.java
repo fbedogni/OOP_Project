@@ -209,7 +209,7 @@ public class JSON implements Parser, Composer
     }
 
     @Override
-    public void Set(String key, Integer i) throws Exception {
+    public void Set(String key, Integer i) /*throws Exception */{
         String str = "";
         Integer endIndex = this.str.lastIndexOf('}');
         String comma = "";
