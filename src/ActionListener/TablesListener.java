@@ -44,6 +44,10 @@ public class TablesListener implements ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		
+		// pollo
+		// qui il DLM va aggiornato scaricando i dati dal server per poter stampare correttamente la lista degli elementi presenti nell'ordine del tavolo
+		
 		JButton source= (JButton) e.getSource();
 		String tableNumber = source.getText();   // il testo di ogni bottone è il numero del tavolo         
 		pb = new PanelBuilder();

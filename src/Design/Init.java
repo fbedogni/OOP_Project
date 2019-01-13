@@ -55,7 +55,7 @@ public class Init implements ActionListener {
 	 * Create the application.
 	 */
 	public Init() {
-		Timers t = new Timers();
+		//Timers t = new Timers();
 		initialize();
 	}
 
