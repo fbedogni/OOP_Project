@@ -11,8 +11,7 @@ public enum Table {
 	tavoli("tavoli"),
     upload("upload"),
     connect("connect"),
-	ordini("ordini"),
-	dettagliordini("dettagliordini");
+	ordini("ordini");
 
     private String table;
 

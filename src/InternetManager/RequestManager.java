@@ -25,9 +25,9 @@ public class RequestManager implements IRESTable {
 		return response;
 	}
 	
-	public String Add_Ordine_Prodotto(JSON data) {
+	public String get_Ordine(int tavolo) {
 		check = false;
-		Request_Add_Ordine_Prodotto(data);
+		Request_get_Ordine(String.valueOf(tavolo) + "*0");
 		while(!check);
 		return response;
 	}
@@ -40,8 +40,6 @@ public class RequestManager implements IRESTable {
 
 	@Override
 	public void Error(RESTResponse response) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	private void Request_Add_Ordine (JSON data)
@@ -53,7 +51,7 @@ public class RequestManager implements IRESTable {
 		WebServer.Main().GenericRequest(HttpMethod.PUT, Table.ordini, "tavolo", tavolo, data, this);
 	}
 	
-	private void Request_Add_Ordine_Prodotto(JSON data) {
-		WebServer.Main().GenericRequest(HttpMethod.PUT, Table.dettagliordini, data, this);
+	private void Request_get_Ordine(String tavolo) {
+		WebServer.Main().GenericRequest(HttpMethod.GET, Table.ordini, "tavolo*pagato", tavolo, this);
 	}
 }

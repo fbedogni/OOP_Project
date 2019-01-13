@@ -16,15 +16,10 @@ public class update_orders{
 	}
 	
 	public void add_order (int tavolo, int prodotto, int quantità) {
-		//aggiunge un ordine abbinato ad un tavolo con pagamento = 0
+		//aggiunge un ordine
 		RequestManager handler = new RequestManager();
-		data = setJSON_Add_Ordine(tavolo);
-		String value = handler.Add_Ordine(data);
-		int id_returned = Integer.parseInt(value.substring(0, value.length()-1));
-		
-		//aggiunge l'ordine con prodotto e quantità
-		data = setJSON_Add_Ordine_Prodotto(id_returned, prodotto, quantità);
-		value = handler.Add_Ordine_Prodotto(data);
+		data = setJSON_Add_Ordine(tavolo, prodotto, quantità);
+		handler.Add_Ordine(data);
 	}
 	
 	public void payment (int tavolo) {
@@ -45,10 +40,12 @@ public class update_orders{
 		}
 	}
 	*/
-	private JSON setJSON_Add_Ordine(int tavolo) {
+	private JSON setJSON_Add_Ordine(int tavolo, int prodotto, int quantità) {
 		JSON a = new JSON();
 		a.Set("tavolo", tavolo);
 		a.Set("pagato", 0);
+		a.Set("prodotto", prodotto);
+		a.Set("quantita", quantità);
 		JSON b = new JSON();
 		b.Set("data", a);
 		return b;
@@ -57,16 +54,6 @@ public class update_orders{
 	private JSON setJSON_pagamento() {
 		JSON a = new JSON();
 		a.Set("pagato", 1);
-		JSON b = new JSON();
-		b.Set("data", a);
-		return b;
-	}
-	
-	private JSON setJSON_Add_Ordine_Prodotto(int ordine, int prodotto, int quantità) {
-		JSON a = new JSON();
-		a.Set("ordine", ordine);
-		a.Set("prodotto", prodotto);
-		a.Set("quantita", quantità);
 		JSON b = new JSON();
 		b.Set("data", a);
 		return b;
