@@ -1,4 +1,4 @@
-package test;
+package InternetManager;
 
 import Internet.HttpMethod;
 import Internet.IRESTable;

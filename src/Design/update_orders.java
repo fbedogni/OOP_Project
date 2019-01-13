@@ -4,7 +4,7 @@ import Internet.HttpMethod;
 import Internet.RESTResponse;
 import Internet.Table;
 import Internet.WebServer;
-import test.RequestManager;
+import InternetManager.RequestManager;
 import Internet.JSON;
 
 public class update_orders{
