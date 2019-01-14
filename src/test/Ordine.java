@@ -22,6 +22,24 @@ public class Ordine {
 		this.prodotto = prodotto;
 		this.quantità = quantità;
 	}
+	
+	public Ordine(int prodotto, int quantità) {
+		this.id = 0;
+		this.prodotto = Prodotto.create_Prodotto(prodotto);
+		this.quantità = quantità;
+	}
+	
+	public Ordine(String prodotto, int quantità) {
+		this.id = 0;
+		this.prodotto = Prodotto.create_Prodotto(prodotto);
+		this.quantità = quantità;
+	}
+
+	public Ordine(Prodotto prodotto, int quantità) {
+		this.id = 0;
+		this.prodotto = prodotto;
+		this.quantità = quantità;
+	}
 
 	public int getId() {
 		return id;
