@@ -1,12 +1,16 @@
 package Design;
 
+import java.util.HashSet;
 import java.util.concurrent.*;
 import java.time.LocalTime;
+import Design.Utils;
 
 public class Timers {
 	private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(2);
+	private Utils utils;
 	
 	public Timers() {
+		utils = new Utils();
 		clock_initializer();
 		updater_initializer();
 	}
@@ -25,9 +29,21 @@ public class Timers {
 	private void updater_initializer() {
 		final Runnable table_update = new Runnable() {
 			public void run() {
-				System.out.println("aggiorno robe!");
+				update_10_sec();
 			}
 		};
 		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(table_update, 0, 10, TimeUnit.SECONDS);
+	}
+	
+	private void update_10_sec() {
+		Update_Orders handler = new Update_Orders();
+		HashSet<Integer> lista_tavoli = handler.get_tavoli_attivi();
+		Window.active.clear();
+		for (Integer i : lista_tavoli)
+		{
+			if (!utils.isActive(i.toString()))
+			Window.active.add(i.toString());
+		}
+		handler.payment(3);
 	}
 }

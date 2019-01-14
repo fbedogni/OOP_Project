@@ -2,6 +2,7 @@ package ActionListener;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -9,6 +10,9 @@ import javax.swing.JPanel;
 
 import Design.Element;
 import Design.PanelBuilder;
+import Design.Update_Orders;
+import Prova.Converter;
+import test.Ordine;
 
 public class TablesListener implements ActionListener{
 
@@ -44,11 +48,14 @@ public class TablesListener implements ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		
-		// pollo
-		// qui il DLM va aggiornato scaricando i dati dal server per poter stampare correttamente la lista degli elementi presenti nell'ordine del tavolo
-		
+
 		JButton source= (JButton) e.getSource();
+
+		Update_Orders handler = new Update_Orders();
+		ArrayList<Ordine> serverList = handler.get_Ordine(Integer.parseInt(source.getText()));
+		Converter conv = new Converter();
+		DLM = conv.converterOrdinetoDLM(serverList);
+		
 		String tableNumber = source.getText();   // il testo di ogni bottone è il numero del tavolo         
 		pb = new PanelBuilder();
 		panel.removeAll();

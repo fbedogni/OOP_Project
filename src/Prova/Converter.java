@@ -20,7 +20,7 @@ public class Converter {
 	
 	// utilizzo un arraylist che poi converto in un semplice array perchè subito non conosco la lunghezza finale di tale array, e con arraylist posso modificare la lunghezza runtime senza problemi, mentre con un array dovrei conoscere subito la lunghezza
 	
-	public Ordine[] conversionDLMtoOrdine (DefaultListModel<String> DLM)
+	public ArrayList<Ordine> conversionDLMtoOrdine (DefaultListModel<String> DLM)
 	{	
 		for (int i=0; i<DLM.size(); ++i)
 		{
@@ -31,21 +31,21 @@ public class Converter {
 			ordini.add(new Ordine(Prodotto.create_Prodotto(name), utils.getNumDLM(row)));
 		}
 		
-		
+		/*
 		ord = new Ordine[ordini.size()];
 		ord = ordini.toArray(ord);
+		*/
 		
-		
-		return ord;
+		return ordini;
 	}
 	
 	
-	public DefaultListModel<String> converterOrdinetoDLM (Ordine[] ordini)
+	public DefaultListModel<String> converterOrdinetoDLM (ArrayList<Ordine> ordini)
 	{
 		
-		for (int i=0; i<ordini.length; ++i)
+		for (Ordine o : ordini)
 		{
-			utils.setRowDLM(ordini[i].getQuantità(), ordini[i].getProdotto().getName(), DLM, ordini[i].getProdotto().getPrice());
+			utils.setRowDLM(o.getQuantità(), o.getProdotto().getName(), DLM, o.getProdotto().getPrice());
 		}
 	
 		return DLM;

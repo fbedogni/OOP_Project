@@ -6,7 +6,6 @@ public class Prodotto {
 	private int id;
 	private String name;
 	private double price;
-	private String category;
 	private boolean initialized;
 
 	public Prodotto() {
@@ -22,14 +21,13 @@ public class Prodotto {
 		return handler.get_Prodotto(name);
 	}
 	
-	public void initialize(int id, String name, double price, String category) {
+	public void initialize(int id, String name, double price) {
 		if (initialized == true)
 			return;
 		initialized = true;
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.category = category;
 	}
 	public int getId() {
 		return id;
@@ -43,11 +41,27 @@ public class Prodotto {
 		return price;
 	}
 	
-	public String getCategory() {
-		return category;
-	}
-	
 	public boolean isInitialized() {
 		return initialized;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj != null && obj instanceof Prodotto)
+		{
+			return this.equals((Prodotto) obj);
+		}
+		return false;
+	}
+	
+	public boolean equals(Prodotto p) {
+		if (this.id == p.id)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }

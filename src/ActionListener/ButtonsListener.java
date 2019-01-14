@@ -2,6 +2,7 @@ package ActionListener;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javax.swing.DefaultListModel;
@@ -12,12 +13,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Design.PanelBuilder;
+import Design.Update_Orders;
 import Design.Utils;
 import Design.Window;
 import Internet.HttpMethod;
 import Internet.Table;
 import Internet.WebServer;
 import Prova.Converter;
+import test.Ordine;
 
 public class ButtonsListener implements ActionListener{
 
@@ -141,10 +144,12 @@ public class ButtonsListener implements ActionListener{
 			
 			Converter c = new Converter();
 			c.conversionDLMtoOrdine(DLM);
-			
-			// pollo
-			// qui il DLM già ordinato, cioè in cui ogni riga è composta da un diverso elemento con la relativa quantità, va caricato sul server
-			
+
+
+			Converter conv = new Converter();
+			ArrayList<Ordine> updatedList = conv.conversionDLMtoOrdine(DLM);
+			Update_Orders handler = new Update_Orders();
+			handler.updatefromFullList(updatedList, Integer.parseInt(tableNumber));
 		}
 		
 		else if (source.getText().equals("Trasferisci tavolo"))
@@ -233,6 +238,8 @@ public class ButtonsListener implements ActionListener{
 			JPanel p = (JPanel) source.getParent();
 			
 			DLM.removeAllElements();
+			Update_Orders handler = new Update_Orders();
+			handler.payment(Integer.parseInt(tableNumber));
 			
 			pb = new PanelBuilder();
 			pb.rightMainBuilder((JPanel) p.getParent(), panel, DLM, tableNumber, floor);

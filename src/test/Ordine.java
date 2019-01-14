@@ -65,4 +65,23 @@ public class Ordine {
 		this.quantità = quantità;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj != null && obj instanceof Ordine)
+		{
+			return this.equals((Ordine) obj);
+		}
+		return false;
+	}
+	
+	public boolean equals(Ordine o) {
+		if(o != null && this.prodotto.equals(o.prodotto) && this.quantità == o.quantità)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
