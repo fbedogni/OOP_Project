@@ -179,11 +179,13 @@ public class Utils {
 			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
 	}
 	
-	public static String replaceSpacesWithScores(String s) {
-		 return s.replace(' ', '-');
+	public static String stringToServer(String s) {
+		 s = s.replace(' ', '-');
+		 return s.replace('/', '.');
 	}
 	
-	public static String replaceScoresWithSpaces(String s) {
-		 return s.replace('-', ' ');
+	public static String serverToString(String s) {
+		 s = s.replace('-', ' ');
+		 return s.replace('.', '/');
 	}
 }

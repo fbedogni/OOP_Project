@@ -58,8 +58,8 @@ public class Update_Orders{
 		String value = handler.get_Prodotto(id);
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
-		String retname = Utils.replaceScoresWithSpaces(response.GetString("name"));
-		String retcategory = Utils.replaceScoresWithSpaces(response.GetString("category"));
+		String retname = Utils.serverToString(response.GetString("name"));
+		String retcategory = Utils.serverToString(response.GetString("category"));
 		try
 		{
 				p.initialize(response.GetInt("id"), retname, response.GetDouble("price"), retcategory);
@@ -73,11 +73,11 @@ public class Update_Orders{
 	
 	public Prodotto get_Prodotto(String name) {
 		RequestManager handler = new RequestManager();
-		String value = handler.get_Prodotto(Utils.replaceSpacesWithScores(name));
+		String value = handler.get_Prodotto(Utils.stringToServer(name));
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
-		String retname = Utils.replaceScoresWithSpaces(response.GetString("name"));
-		String retcategory = Utils.replaceScoresWithSpaces(response.GetString("category"));
+		String retname = Utils.serverToString(response.GetString("name"));
+		String retcategory = Utils.serverToString(response.GetString("category"));
 		try
 		{
 			p.initialize(response.GetInt("id"), retname, response.GetDouble("price"), retcategory);
