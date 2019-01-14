@@ -183,6 +183,7 @@ public class Utils {
 	
 	public static String stringToServer(String s) {
 		 s = s.replace(' ', '-');
+		 s = s.replaceAll("'", "");
 		 return s.replace('/', '.');
 	}
 	
