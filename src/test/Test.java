@@ -2,10 +2,11 @@ package test;
 
 import java.util.ArrayList;
 
-import Design.update_orders;
+import Design.Update_orders;
 
 public class Test {
 
+<<<<<<< HEAD
 	public static void main(String[] args) {/*
 		IRESTable callback = new IRESTable() {
 
@@ -24,7 +25,11 @@ public class Test {
 						papera.add(o);
 			}
 		WebServer.Main().GenericRequest(HttpMethod.GET, Table.ordini, callback);*/
+		Update_orders a = new Update_orders();
+=======
+	public static void main(String[] args) {
 		update_orders a = new update_orders();
+>>>>>>> b05c4c7609490977ad909d61793ef225c2a1957a
 		a.add_order(22, 2, 5);
 	}
 
