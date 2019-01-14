@@ -67,16 +67,16 @@ public class Utils {
 		return string;
 	}
 	
-	public StringBuilder getNameDLM (String string, int lenght)
+	public String getNameDLM (String string, int lenght)
 	{
-		StringBuilder name = new StringBuilder();
+		String name = "";
 		
 		for (int i=index; i< lenght; ++i)
 		{
 			if ((string.charAt(i) == ' ') && (string.charAt(i+1) == ' '))
 				break;
 			
-			name.append(string.charAt(i));
+			name += string.charAt(i);
 		}
 		
 		return name;
