@@ -19,10 +19,10 @@ public class Update_Orders{
 		
 	}
 	
-	public void add_order (int tavolo, int prodotto, int quantità) {
+	public void add_order (Ordine o, int tavolo) {
 		//aggiunge un ordine
 		RequestManager handler = new RequestManager();
-		data = setJSON_Add_Ordine(tavolo, prodotto, quantità);
+		data = setJSON_Add_Ordine(tavolo, o.getProdotto().getId(), o.getQuantità());
 		handler.Add_Ordine(data);
 	}
 	
@@ -58,12 +58,11 @@ public class Update_Orders{
 		String value = handler.get_Prodotto(id);
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
+		String retname = Utils.replaceUnderscoresWithSpaces(response.GetString("name"));
+		String retcategory = Utils.replaceUnderscoresWithSpaces(response.GetString("category"));
 		try
 		{
-				p.initialize(response.GetInt("id"),
-						response.GetString("name"),
-						response.GetDouble("price"),
-						response.GetString("category"));
+				p.initialize(response.GetInt("id"), retname, response.GetDouble("price"), retcategory);
 		}
 		catch (Exception e)
 		{
@@ -74,15 +73,14 @@ public class Update_Orders{
 	
 	public Prodotto get_Prodotto(String name) {
 		RequestManager handler = new RequestManager();
-		String value = handler.get_Prodotto(name);
+		String value = handler.get_Prodotto(Utils.replaceSpacesWithUnderscores(name));
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
+		String retname = Utils.replaceUnderscoresWithSpaces(response.GetString("name"));
+		String retcategory = Utils.replaceUnderscoresWithSpaces(response.GetString("category"));
 		try
 		{
-			p.initialize(response.GetInt("id"),
-					response.GetString("name"),
-					response.GetDouble("price"),
-					response.GetString("category"));
+			p.initialize(response.GetInt("id"), retname, response.GetDouble("price"), retcategory);
 		}
 		catch (Exception e)
 		{
