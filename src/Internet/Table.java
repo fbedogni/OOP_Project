@@ -10,7 +10,9 @@ public enum Table {
 	liquori("liquori"),
 	tavoli("tavoli"),
     upload("upload"),
-    connect("connect");
+    connect("connect"),
+    prodotti("prodotti"),
+	ordini("ordini");
 
     private String table;
 

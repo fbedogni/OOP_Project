@@ -138,6 +138,9 @@ public class ButtonsListener implements ActionListener{
 			
 			utils.reorderDLM(DLM);
 			
+			// pollo
+			// qui il DLM già ordinato, cioè in cui ogni riga è composta da un diverso elemento con la relativa quantità, va caricato sul server
+			
 		}
 		
 		else if (source.getText().equals("Trasferisci tavolo"))
