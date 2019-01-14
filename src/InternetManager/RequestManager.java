@@ -1,5 +1,6 @@
 package InternetManager;
 
+import Design.Utils;
 import Internet.HttpMethod;
 import Internet.IRESTable;
 import Internet.JSON;

@@ -180,8 +180,12 @@ public class Utils {
 		else
 			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
 	}
-	/*
-	public String replaceSpacesWithUnderscores(String s) {
-		 return String.replace(
-	}*/
+	
+	public static String replaceSpacesWithScores(String s) {
+		 return s.replace(' ', '_');
+	}
+	
+	public static String replaceScoresWithSpaces(String s) {
+		 return s.replace('_', ' ');
+	}
 }
