@@ -60,8 +60,10 @@ public class Update_Orders{
 		Prodotto p = new Prodotto();
 		try
 		{
-				JSON a = response.Next();
-				p.initialize(a.GetInt("id"), a.GetString("name"), a.GetDouble("price"), a.GetString("category"));
+				p.initialize(response.GetInt("id"),
+						response.GetString("name"),
+						response.GetDouble("price"),
+						response.GetString("category"));
 		}
 		catch (Exception e)
 		{
@@ -74,11 +76,13 @@ public class Update_Orders{
 		RequestManager handler = new RequestManager();
 		String value = handler.get_Prodotto(name);
 		JSON response = new JSON(value);
-		Prodotto p = null;
+		Prodotto p = new Prodotto();
 		try
 		{
-				JSON a = response.Next();
-				p = Prodotto.create_Prodotto(a.GetInt("id"));
+			p.initialize(response.GetInt("id"),
+					response.GetString("name"),
+					response.GetDouble("price"),
+					response.GetString("category"));
 		}
 		catch (Exception e)
 		{
