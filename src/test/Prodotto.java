@@ -23,7 +23,7 @@ public class Prodotto {
 	}
 	
 	public void initialize(int id, String name, double price, String category) {
-		if (initialized = true)
+		if (initialized == true)
 			return;
 		initialized = true;
 		this.id = id;
