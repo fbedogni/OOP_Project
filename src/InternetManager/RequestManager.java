@@ -24,10 +24,17 @@ public class RequestManager implements IRESTable {
 		while(!check);
 		return response;
 	}
-	
+
 	public String get_Ordine(int tavolo) {
 		check = false;
 		Request_get_Ordine(String.valueOf(tavolo) + "*0");
+		while(!check);
+		return response;
+	}
+	
+	public String get_Prodotto(int id) {
+		check = false;
+		Request_get_Prodotto(String.valueOf(id));
 		while(!check);
 		return response;
 	}
@@ -53,5 +60,9 @@ public class RequestManager implements IRESTable {
 	
 	private void Request_get_Ordine(String tavolo) {
 		WebServer.Main().GenericRequest(HttpMethod.GET, Table.ordini, "tavolo*pagato", tavolo, this);
+	}
+	
+	private void Request_get_Prodotto(String id) {
+		WebServer.Main().GenericRequest(HttpMethod.GET, Table.prodotti, "id", id, this);
 	}
 }
