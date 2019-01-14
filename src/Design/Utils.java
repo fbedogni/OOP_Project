@@ -181,11 +181,11 @@ public class Utils {
 			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
 	}
 	
-	public static String replaceSpacesWithUnderscores(String s) {
+	public static String replaceSpacesWithScores(String s) {
 		 return s.replace(' ', '_');
 	}
 	
-	public static String replaceUnderscoresWithSpaces(String s) {
+	public static String replaceScoresWithSpaces(String s) {
 		 return s.replace('_', ' ');
 	}
 }
