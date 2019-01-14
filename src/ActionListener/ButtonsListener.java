@@ -17,6 +17,7 @@ import Design.Window;
 import Internet.HttpMethod;
 import Internet.Table;
 import Internet.WebServer;
+import Prova.Converter;
 
 public class ButtonsListener implements ActionListener{
 
@@ -137,6 +138,9 @@ public class ButtonsListener implements ActionListener{
 			panel.repaint();
 			
 			utils.reorderDLM(DLM);
+			
+			//Converter c = new Converter();
+			//c.conversionDLMtoOrdine(DLM);
 			
 			// pollo
 			// qui il DLM già ordinato, cioè in cui ogni riga è composta da un diverso elemento con la relativa quantità, va caricato sul server
