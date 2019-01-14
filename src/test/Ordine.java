@@ -7,7 +7,13 @@ public class Ordine {
 	
 	public Ordine(int id, int prodotto, int quantità) {
 		this.id = id;
-		this.prodotto = new Prodotto(prodotto);
+		this.prodotto = Prodotto.create_Prodotto(prodotto);
+		this.quantità = quantità;
+	}
+	
+	public Ordine(int id, String prodotto, int quantità) {
+		this.id = id;
+		this.prodotto = Prodotto.create_Prodotto(prodotto);
 		this.quantità = quantità;
 	}
 
@@ -31,10 +37,6 @@ public class Ordine {
 
 	public void setProdotto(Prodotto prodotto) {
 		this.prodotto = prodotto;
-	}
-	
-	public void setProdotto(int prodotto) {
-		this.prodotto = new Prodotto(prodotto);
 	}
 
 	public int getQuantità() {

@@ -1,17 +1,25 @@
 package test;
 
-import Design.update_orders;
+import Design.Update_Orders;
 
 public class Prodotto {
 	private int id;
 	private String name;
 	private double price;
 	private String category;
-	private boolean initialized=false;
-	
+	private boolean initialized;
+
+	public Prodotto() {
+		initialized = false;
+	}
 	public static Prodotto create_Prodotto(int id) {
-		update_orders handler = new update_orders();
+		Update_Orders handler = new Update_Orders();
 		return handler.get_Prodotto(id);
+	}
+	
+	public static Prodotto create_Prodotto(String name) {
+		Update_Orders handler = new Update_Orders();
+		return handler.get_Prodotto(name);
 	}
 	
 	public void initialize(int id, String name, double price, String category) {

@@ -11,11 +11,11 @@ import Internet.WebServer;
 import InternetManager.RequestManager;
 import Internet.JSON;
 
-public class update_orders{
+public class Update_Orders{
 
 	private JSON data;
 	
-	public update_orders() {
+	public Update_Orders() {
 		
 	}
 	
@@ -56,6 +56,23 @@ public class update_orders{
 	public Prodotto get_Prodotto(int id) {
 		RequestManager handler = new RequestManager();
 		String value = handler.get_Prodotto(id);
+		JSON response = new JSON(value);
+		Prodotto p = new Prodotto();
+		try
+		{
+				JSON a = response.Next();
+				p.initialize(a.GetInt("id"), a.GetString("name"), a.GetDouble("price"), a.GetString("category"));
+		}
+		catch (Exception e)
+		{
+			
+		}
+		return p;
+	}
+	
+	public Prodotto get_Prodotto(String name) {
+		RequestManager handler = new RequestManager();
+		String value = handler.get_Prodotto(name);
 		JSON response = new JSON(value);
 		Prodotto p = null;
 		try

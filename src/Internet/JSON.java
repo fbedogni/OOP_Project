@@ -64,6 +64,21 @@ public class JSON implements Parser, Composer
         return result;
     }
 
+    public Double GetDouble(String key) throws JSONParseException{
+        Point indexes = GetIndexes(key);
+        Double result;
+        try
+        {
+            result = Double.parseDouble(str.substring(indexes.x,indexes.y));
+        }
+        catch (Exception e)
+        {
+            throw new JSONParseException("Not a Double");
+        }
+
+        return result;
+    }
+
     public String GetValue()
     {
         return this.str;
