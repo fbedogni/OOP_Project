@@ -31,4 +31,23 @@ public class Prodotto {
 		this.price = price;
 		this.category = category;
 	}
+	public int getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public boolean isInitialized() {
+		return initialized;
+	}
 }

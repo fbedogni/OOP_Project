@@ -8,7 +8,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		Update_Orders a = new Update_Orders();
-		a.add_order(22, 2, 5);
+		Prodotto p = Prodotto.create_Prodotto(1);
+		system
 	}
 
 }
