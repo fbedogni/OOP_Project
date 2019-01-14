@@ -182,10 +182,10 @@ public class Utils {
 	}
 	
 	public static String replaceSpacesWithScores(String s) {
-		 return s.replace(' ', '_');
+		 return s.replace(' ', '-');
 	}
 	
 	public static String replaceScoresWithSpaces(String s) {
-		 return s.replace('_', ' ');
+		 return s.replace('-', ' ');
 	}
 }
