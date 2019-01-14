@@ -36,10 +36,6 @@ public class Converter {
 		ord = ordini.toArray(ord);
 		
 		
-		for(int i=0; i<ord.length; ++i)
-		{
-			System.out.println(ord[i]);
-		}
 		return ord;
 	}
 	

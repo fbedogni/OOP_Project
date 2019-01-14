@@ -139,8 +139,8 @@ public class ButtonsListener implements ActionListener{
 			
 			utils.reorderDLM(DLM);
 			
-			//Converter c = new Converter();
-			//c.conversionDLMtoOrdine(DLM);
+			Converter c = new Converter();
+			c.conversionDLMtoOrdine(DLM);
 			
 			// pollo
 			// qui il DLM già ordinato, cioè in cui ogni riga è composta da un diverso elemento con la relativa quantità, va caricato sul server

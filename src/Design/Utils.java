@@ -22,8 +22,6 @@ public class Utils {
 		
 		c = String.valueOf(cost);
 		
-		System.out.println (c);
-		
 		return c;
 	}
 	
