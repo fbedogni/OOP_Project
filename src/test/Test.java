@@ -7,6 +7,7 @@ import Design.Update_orders;
 public class Test {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static void main(String[] args) {/*
 		IRESTable callback = new IRESTable() {
 
@@ -27,6 +28,8 @@ public class Test {
 		WebServer.Main().GenericRequest(HttpMethod.GET, Table.ordini, callback);*/
 		Update_orders a = new Update_orders();
 =======
+=======
+>>>>>>> b05c4c7609490977ad909d61793ef225c2a1957a
 	public static void main(String[] args) {
 		update_orders a = new update_orders();
 >>>>>>> b05c4c7609490977ad909d61793ef225c2a1957a

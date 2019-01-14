@@ -1,6 +1,6 @@
 package test;
 
-import Design.update_orders;
+import Design.Update_orders;
 
 public class Prodotto {
 	private int id;
@@ -10,7 +10,7 @@ public class Prodotto {
 	private boolean initialized=false;
 	
 	public static Prodotto create_Prodotto(int id) {
-		update_orders handler = new update_orders();
+		Update_orders handler = new Update_orders();
 		return handler.get_Prodotto(id);
 	}
 	
