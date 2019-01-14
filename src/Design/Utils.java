@@ -180,4 +180,8 @@ public class Utils {
 		else
 			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
 	}
+	/*
+	public String replaceSpacesWithUnderscores(String s) {
+		 
+	}*/
 }
