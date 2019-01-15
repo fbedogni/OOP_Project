@@ -45,7 +45,7 @@ public class Converter {
 		
 		for (Ordine o : ordini)
 		{
-			utils.setRowDLM(o.getQuantità(), o.getProdotto().getName(), DLM, o.getProdotto().getPrice());
+			utils.setRowDLM(o.getQuantità(), o.getProdotto().getName(), DLM, o.getProdotto().getPrice()*o.getQuantità());
 		}
 	
 		return DLM;

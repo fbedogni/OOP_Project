@@ -156,7 +156,7 @@ public class Utils {
 		else if (counter < 100)
 			DLM.addElement("    " + counter + "        " + string + this.DLMSpaces(string) + cost);
 		else
-			DLM.addElement("   " + counter + "        " + string + this.DLMSpaces(string) + cost);
+			DLM.addElement("   " + counter + "     " + string + this.DLMSpaces(string) + cost);
 	}
 	
 	public void setRowDLM (int counter, String string, DefaultListModel<String> DLM, double cost, int position)
@@ -176,7 +176,7 @@ public class Utils {
 		else if (counter < 100)
 			DLM.add(position, "    " + counter + "        " + name + this.DLMSpaces(name) + cost);
 		else
-			DLM.add(position, "   " + counter + "        " + name + this.DLMSpaces(name) + cost);
+			DLM.add(position, "   " + counter + "     " + name + this.DLMSpaces(name) + cost);
 	}
 	
 	public static String stringToServer(String s) {
