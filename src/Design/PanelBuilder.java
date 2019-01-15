@@ -1056,22 +1056,22 @@ public class PanelBuilder {
 		firstsPanel.add(btnNewButton_6);
 		btnNewButton_6.setBackground(new Color(255, 255, 102));
 			
-		JButton btnNewButton_3 = new JButton("ZZ");
+		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(el);
 		firstsPanel.add(btnNewButton_3);
 		btnNewButton_3.setBackground(new Color(255, 255, 102));
 			
-		JButton btnNewButton = new JButton("ZZ");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(el);
 		firstsPanel.add(btnNewButton);
 		btnNewButton.setBackground(new Color(255, 255, 102));
 			
-		JButton btnNewButton_16 = new JButton("ZZ");
+		JButton btnNewButton_16 = new JButton("");
 		btnNewButton_16.addActionListener(el);
 		firstsPanel.add(btnNewButton_16);
 		btnNewButton_16.setBackground(new Color(255, 255, 102));
 			
-		JButton btnNewButton_17 = new JButton("ZZ");
+		JButton btnNewButton_17 = new JButton("");
 		btnNewButton_17.addActionListener(el);
 		firstsPanel.add(btnNewButton_17);
 		btnNewButton_17.setBackground(new Color(255, 255, 102));
@@ -1177,22 +1177,22 @@ public class PanelBuilder {
 		btnNewButton_13.setBackground(new Color(255, 235, 205));
 		secondsPanel.add(btnNewButton_13);
 		
-		JButton btnNewButton_19 = new JButton("ZZ");
+		JButton btnNewButton_19 = new JButton("");
 		btnNewButton_19.addActionListener(el);
 		btnNewButton_19.setBackground(new Color(255, 235, 205));
 		secondsPanel.add(btnNewButton_19);
 		
-		JButton btnNewButton_18 = new JButton("ZZ");
+		JButton btnNewButton_18 = new JButton("");
 		btnNewButton_18.addActionListener(el);
 		btnNewButton_18.setBackground(new Color(255, 235, 205));
 		secondsPanel.add(btnNewButton_18);
 		
-		JButton btnNewButton_17 = new JButton("ZZ");
+		JButton btnNewButton_17 = new JButton("");
 		btnNewButton_17.addActionListener(el);
 		btnNewButton_17.setBackground(new Color(255, 235, 205));
 		secondsPanel.add(btnNewButton_17);
 		
-		JButton btnNewButton = new JButton("ZZ");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(el);
 		btnNewButton.setBackground(new Color(255, 235, 205));
 		secondsPanel.add(btnNewButton);
@@ -1269,17 +1269,17 @@ public class PanelBuilder {
 		btnNewButton_35.setBackground(new Color(102, 255, 102));
 		veggyPanel.add(btnNewButton_35);
 		
-		JButton btnNewButton_20 = new JButton("ZZ");
+		JButton btnNewButton_20 = new JButton("");
 		btnNewButton_20.addActionListener(el);
 		btnNewButton_20.setBackground(new Color(102, 255, 102));
 		veggyPanel.add(btnNewButton_20);
 		
-		JButton btnNewButton_41 = new JButton("ZZ");
+		JButton btnNewButton_41 = new JButton("");
 		btnNewButton_41.addActionListener(el);
 		btnNewButton_41.setBackground(new Color(102, 255, 102));
 		veggyPanel.add(btnNewButton_41);
 		
-		JButton btnNewButton_42 = new JButton("ZZ");
+		JButton btnNewButton_42 = new JButton("");
 		btnNewButton_42.addActionListener(el);
 		btnNewButton_42.setBackground(new Color(102, 255, 102));
 		veggyPanel.add(btnNewButton_42);
@@ -1744,17 +1744,17 @@ public class PanelBuilder {
 		btnNewButton_31.setBackground(new Color(160, 82, 45));
 		panel_2.add(btnNewButton_31);
 		
-		JButton btnNewButton_34 = new JButton("ZZ");
+		JButton btnNewButton_34 = new JButton("");
 		btnNewButton_34.addActionListener(el);
 		btnNewButton_34.setBackground(new Color(175, 238, 238));
 		panel_2.add(btnNewButton_34);
 		
-		JButton btnNewButton_35 = new JButton("MANCIA");
+		JButton btnNewButton_35 = new JButton("");
 		btnNewButton_35.addActionListener(el);
 		btnNewButton_35.setBackground(new Color(175, 238, 238));
 		panel_2.add(btnNewButton_35);
 		
-		JButton btnNewButton_36 = new JButton("ZZ");
+		JButton btnNewButton_36 = new JButton("");
 		btnNewButton_36.addActionListener(el);
 		btnNewButton_36.setBackground(new Color(175, 238, 238));
 		panel_2.add(btnNewButton_36);
@@ -1833,17 +1833,17 @@ public class PanelBuilder {
 		btnNewButton_39.setBackground(new Color(240, 230, 140));
 		panel.add(btnNewButton_39);
 		
-		JButton btnNewButton_40 = new JButton("ZZ");
+		JButton btnNewButton_40 = new JButton("");
 		btnNewButton_40.addActionListener(el);
 		btnNewButton_40.setBackground(new Color(240, 230, 140));
 		panel.add(btnNewButton_40);
 		
-		JButton btnNewButton_41 = new JButton("ZZ");
+		JButton btnNewButton_41 = new JButton("");
 		btnNewButton_41.addActionListener(el);
 		btnNewButton_41.setBackground(new Color(240, 230, 140));
 		panel.add(btnNewButton_41);
 		
-		JButton btnNewButton_42 = new JButton("ZZ");
+		JButton btnNewButton_42 = new JButton("");
 		btnNewButton_42.addActionListener(el);
 		btnNewButton_42.setBackground(new Color(240, 230, 140));
 		panel.add(btnNewButton_42);
@@ -1963,12 +1963,12 @@ public class PanelBuilder {
 		btnNewButton_31.setBackground(new Color(255, 165, 0));
 		dessertPanel.add(btnNewButton_31);
 		
-		JButton btnNewButton_32 = new JButton("ZZ");
+		JButton btnNewButton_32 = new JButton("");
 		btnNewButton_32.addActionListener(el);
 		btnNewButton_32.setBackground(new Color(255, 165, 0));
 		dessertPanel.add(btnNewButton_32);
 		
-		JButton btnNewButton_33 = new JButton("ZZ");
+		JButton btnNewButton_33 = new JButton("");
 		btnNewButton_33.addActionListener(el);
 		btnNewButton_33.setBackground(new Color(255, 165, 0));
 		dessertPanel.add(btnNewButton_33);
@@ -2006,22 +2006,22 @@ public class PanelBuilder {
 		btnNewButton_6.setBackground(new Color(255, 153, 102));
 		dessWinesPanel.add(btnNewButton_6);
 		
-		JButton btnNewButton_7 = new JButton("ZZ");
+		JButton btnNewButton_7 = new JButton("");
 		btnNewButton_7.addActionListener(el);
 		btnNewButton_7.setBackground(new Color(255, 153, 102));
 		dessWinesPanel.add(btnNewButton_7);
 		
-		JButton btnNewButton_5 = new JButton("ZZ");
+		JButton btnNewButton_5 = new JButton("");
 		btnNewButton_5.addActionListener(el);
 		btnNewButton_5.setBackground(new Color(255, 153, 102));
 		dessWinesPanel.add(btnNewButton_5);
 		
-		JButton btnNewButton_3 = new JButton("ZZ");
+		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(el);
 		btnNewButton_3.setBackground(new Color(255, 153, 102));
 		dessWinesPanel.add(btnNewButton_3);
 		
-		JButton btnNewButton = new JButton("ZZ");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(el);
 		btnNewButton.setBackground(new Color(255, 153, 102));
 		dessWinesPanel.add(btnNewButton);
@@ -2268,17 +2268,17 @@ public class PanelBuilder {
 		btnNewButton_36.setBackground(new Color(204, 204, 255));
 		wines5Panel.add(btnNewButton_36);
 		
-		JButton btnNewButton_30 = new JButton("ZZ");
+		JButton btnNewButton_30 = new JButton("");
 		btnNewButton_30.addActionListener(el);
 		btnNewButton_30.setBackground(new Color(204, 204, 255));
 		wines5Panel.add(btnNewButton_30);
 		
-		JButton btnNewButton_40 = new JButton("ZZ");
+		JButton btnNewButton_40 = new JButton("");
 		btnNewButton_40.addActionListener(el);
 		btnNewButton_40.setBackground(new Color(204, 204, 255));
 		wines5Panel.add(btnNewButton_40);
 		
-		JButton btnNewButton_39 = new JButton("ZZ");
+		JButton btnNewButton_39 = new JButton("");
 		btnNewButton_39.addActionListener(el);
 		btnNewButton_39.setBackground(new Color(204, 204, 255));
 		wines5Panel.add(btnNewButton_39);
@@ -2445,12 +2445,12 @@ public class PanelBuilder {
 		btnNewButton_3.setBackground(new Color(233, 150, 122));
 		liquorsPanel.add(btnNewButton_3);
 		
-		JButton btnNewButton_2 = new JButton("ZZ");
+		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.addActionListener(el);
 		btnNewButton_2.setBackground(new Color(233, 150, 122));
 		liquorsPanel.add(btnNewButton_2);
 		
-		JButton btnNewButton = new JButton("ZZ");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(el);
 		btnNewButton.setBackground(new Color(233, 150, 122));
 		liquorsPanel.add(btnNewButton);
