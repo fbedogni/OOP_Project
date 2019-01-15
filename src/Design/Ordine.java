@@ -1,4 +1,4 @@
-package test;
+package Design;
 
 public class Ordine {
 	private int id;

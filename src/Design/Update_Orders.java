@@ -3,8 +3,6 @@ package Design;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import test.Ordine;
-import test.Prodotto;
 import InternetManager.RequestManager;
 import Internet.JSON;
 

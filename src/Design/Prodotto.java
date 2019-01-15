@@ -1,6 +1,4 @@
-package test;
-
-import Design.Update_Orders;
+package Design;
 
 public class Prodotto {
 	private int id;

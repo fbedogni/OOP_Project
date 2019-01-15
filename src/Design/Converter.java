@@ -1,10 +1,8 @@
-package test;
+package Design;
 
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
-
-import Design.Utils;
 
 public class Converter {
 	

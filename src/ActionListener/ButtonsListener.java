@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Design.Converter;
+import Design.Ordine;
 import Design.PanelBuilder;
 import Design.Timers;
 import Design.Update_Orders;
@@ -20,8 +22,6 @@ import Design.Window;
 import Internet.HttpMethod;
 import Internet.Table;
 import Internet.WebServer;
-import test.Converter;
-import test.Ordine;
 
 public class ButtonsListener implements ActionListener{
 
