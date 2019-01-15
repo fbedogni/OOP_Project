@@ -19,7 +19,7 @@ import Design.Window;
 import Internet.HttpMethod;
 import Internet.Table;
 import Internet.WebServer;
-import Prova.Converter;
+import test.Converter;
 import test.Ordine;
 
 public class ButtonsListener implements ActionListener{
@@ -154,11 +154,6 @@ public class ButtonsListener implements ActionListener{
 			ArrayList<Ordine> updatedList = conv.conversionDLMtoOrdine(DLM);
 			Update_Orders handler = new Update_Orders();
 			handler.updatefromFullList(updatedList, Integer.parseInt(tableNumber));
-		}
-		
-		else if (source.getText().equals("Trasferisci tavolo"))
-		{
-			
 		}
 		
 		else if (source.getName().equals("buttonMain"))

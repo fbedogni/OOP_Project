@@ -20,7 +20,7 @@ public class Timers {
 			public void run() {
 				LocalTime time = LocalTime.now();
 				String t = time.toString();
-				System.out.println(t.substring(0, t.lastIndexOf(':')));
+				//System.out.println(t.substring(0, t.lastIndexOf(':')));
 			}
 		};
 		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(time_update, 0, 1, TimeUnit.SECONDS);
@@ -44,5 +44,10 @@ public class Timers {
 			if (!utils.isActive(i.toString()))
 			Window.active.add(i.toString());
 		}
+	}
+
+	public String getTime() {
+		// TODO Auto-generated method stub
+		return "15:10";
 	}
 }
