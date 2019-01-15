@@ -99,10 +99,14 @@ public class Update_Orders{
 		String value = handler.get_Prodotto(id);
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
-		String retname = Utils.serverToString(response.GetString("name"));
 		try
 		{
-				p.initialize(response.GetInt("id"), retname, response.GetDouble("price"));
+			if(response.HasNext())
+			{
+				JSON a = response.Next();
+				String retname = Utils.serverToString(a.GetString("name"));
+				p.initialize(a.GetInt("id"), retname, a.GetDouble("price"));
+			}
 		}
 		catch (Exception e)
 		{
@@ -116,10 +120,14 @@ public class Update_Orders{
 		String value = handler.get_Prodotto(Utils.stringToServer(name));
 		JSON response = new JSON(value);
 		Prodotto p = new Prodotto();
-		String retname = Utils.serverToString(response.GetString("name"));
 		try
 		{
-			p.initialize(response.GetInt("id"), retname, response.GetDouble("price"));
+			if(response.HasNext())
+			{
+				JSON a = response.Next();
+				String retname = Utils.serverToString(a.GetString("name"));
+				p.initialize(a.GetInt("id"), retname, a.GetDouble("price"));
+			}
 		}
 		catch (Exception e)
 		{

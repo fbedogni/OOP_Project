@@ -73,6 +73,21 @@ public class ButtonsListener implements ActionListener{
 	public void setPanel(JPanel panel) {
 		this.panel = panel;
 	}
+	
+	public void updateScreen() {
+		panel.removeAll();
+		pb = new PanelBuilder();
+		if (floor == -1)
+			pb.greenBuilder(panel);
+		if (floor == 0)
+			pb.groundBuilder(panel);
+		if (floor == 1)
+			pb.floorBuilder(panel);
+		panel.setBackground(new Color(255, 255, 240));
+		panel.setOpaque(true);
+		panel.revalidate();
+		panel.repaint();
+	}
 
 	public void actionPerformed(ActionEvent e) {
 		source = (JButton) e.getSource();
@@ -126,19 +141,8 @@ public class ButtonsListener implements ActionListener{
 				if (utils.isActive(tableNumber))
 					Window.active.remove(tableNumber);
 			}
-			
-			panel.removeAll();
-			pb = new PanelBuilder();
-			if (floor == -1)
-				pb.greenBuilder(panel);
-			if (floor == 0)
-				pb.groundBuilder(panel);
-			if (floor == 1)
-				pb.floorBuilder(panel);
-			panel.setBackground(new Color(255, 255, 240));
-			panel.setOpaque(true);
-			panel.revalidate();
-			panel.repaint();
+
+			updateScreen();
 			
 			utils.reorderDLM(DLM);
 			

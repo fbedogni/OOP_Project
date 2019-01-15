@@ -44,6 +44,5 @@ public class Timers {
 			if (!utils.isActive(i.toString()))
 			Window.active.add(i.toString());
 		}
-		handler.payment(3);
 	}
 }
