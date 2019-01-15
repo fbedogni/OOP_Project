@@ -2,14 +2,21 @@ package Design;
 
 import java.util.HashSet;
 import java.util.concurrent.*;
+
+import javax.swing.JPanel;
+
+import java.awt.Color;
 import java.time.LocalTime;
 import Design.Utils;
 
 public class Timers {
 	private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(2);
 	private Utils utils;
+	private JPanel panel;
+	public static int floor;
 	
-	public Timers() {
+	public Timers(JPanel panel) {
+		this.panel = panel;
 		utils = new Utils();
 		clock_initializer();
 		updater_initializer();
@@ -44,5 +51,23 @@ public class Timers {
 			if (!utils.isActive(i.toString()))
 			Window.active.add(i.toString());
 		}
+		updateScreen();
+	}
+	
+	private void updateScreen() {
+		if (!Init.finestraTavoliAttiva)
+		{ return; }
+		panel.removeAll();
+		PanelBuilder pb = new PanelBuilder();
+		if (floor == -1)
+			pb.greenBuilder(panel);
+		if (floor == 0)
+			pb.groundBuilder(panel);
+		if (floor == 1)
+			pb.floorBuilder(panel);
+		panel.setBackground(new Color(255, 255, 240));
+		panel.setOpaque(true);
+		panel.revalidate();
+		panel.repaint();
 	}
 }

@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Design.PanelBuilder;
+import Design.Timers;
 import Design.Update_Orders;
 import Design.Utils;
 import Design.Window;
@@ -73,21 +74,6 @@ public class ButtonsListener implements ActionListener{
 	public void setPanel(JPanel panel) {
 		this.panel = panel;
 	}
-	
-	public void updateScreen() {
-		panel.removeAll();
-		pb = new PanelBuilder();
-		if (floor == -1)
-			pb.greenBuilder(panel);
-		if (floor == 0)
-			pb.groundBuilder(panel);
-		if (floor == 1)
-			pb.floorBuilder(panel);
-		panel.setBackground(new Color(255, 255, 240));
-		panel.setOpaque(true);
-		panel.revalidate();
-		panel.repaint();
-	}
 
 	public void actionPerformed(ActionEvent e) {
 		source = (JButton) e.getSource();
@@ -95,6 +81,7 @@ public class ButtonsListener implements ActionListener{
 		
 		if (source.getText().equals("Primo piano"))
 		{
+			Timers.floor = 1;
 			panel.removeAll();
 			pb = new PanelBuilder();
 			pb.floorBuilder(panel);
@@ -106,6 +93,7 @@ public class ButtonsListener implements ActionListener{
 		
 		else if (source.getText().equals("Piano terra"))
 		{
+			Timers.floor = 0;
 			panel.removeAll();
 			pb = new PanelBuilder();
 			pb.groundBuilder(panel);
@@ -117,6 +105,7 @@ public class ButtonsListener implements ActionListener{
 		
 		else if (source.getText().equals("Prato"))
 		{
+			Timers.floor = -1;
 			panel.removeAll();
 			pb = new PanelBuilder();
 			pb.greenBuilder(panel);
@@ -142,7 +131,18 @@ public class ButtonsListener implements ActionListener{
 					Window.active.remove(tableNumber);
 			}
 
-			updateScreen();
+			panel.removeAll();
+			pb = new PanelBuilder();
+			if (floor == -1)
+				pb.greenBuilder(panel);
+			if (floor == 0)
+				pb.groundBuilder(panel);
+			if (floor == 1)
+				pb.floorBuilder(panel);
+			panel.setBackground(new Color(255, 255, 240));
+			panel.setOpaque(true);
+			panel.revalidate();
+			panel.repaint();
 			
 			utils.reorderDLM(DLM);
 			

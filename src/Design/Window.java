@@ -46,7 +46,8 @@ public class Window {
 		
 		pb = new PanelBuilder();
 		pb.groundBuilder(panel);
-		
+
+		Timers t = new Timers(panel);
 		
 		
 	}

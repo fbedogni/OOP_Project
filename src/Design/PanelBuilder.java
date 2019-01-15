@@ -29,6 +29,8 @@ public class PanelBuilder {
 	{	
 		int counter=0;
 		
+		Init.finestraTavoliAttiva = true;
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(1195, 0, 155, 729);
 		panel.add(panel_1);
@@ -459,6 +461,8 @@ public class PanelBuilder {
 	{
 		int counter=0;
 		
+		Init.finestraTavoliAttiva = true;
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(1195, 0, 155, 729);
 		panel.add(panel_1);
@@ -724,6 +728,8 @@ public class PanelBuilder {
 	{
 		int counter=0;
 		
+		Init.finestraTavoliAttiva = true;
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(1195, 0, 155, 729);
 		panel.add(panel_1);
@@ -938,6 +944,8 @@ public class PanelBuilder {
 	
 	public void firstsBuilder (JPanel panel, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
@@ -1079,6 +1087,8 @@ public class PanelBuilder {
 
 	public void secondsBuilder (JPanel panel, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
@@ -1287,6 +1297,8 @@ public class PanelBuilder {
 	
 	public void rightMainBuilder (JPanel panel_10, JPanel panel_9, DefaultListModel<String> DLM, String tableNumber,int floor)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		Image main = new ImageIcon(this.getClass().getResource("/main.png")).getImage();
 		Image bottle = new ImageIcon(this.getClass().getResource("/bottle.png")).getImage();
 		Image liquor = new ImageIcon(this.getClass().getResource("/liquor.png")).getImage();
@@ -1630,6 +1642,8 @@ public class PanelBuilder {
 	
 	public void leftMainBuilder (JPanel panel_4, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
@@ -1853,6 +1867,8 @@ public class PanelBuilder {
 	
 	public void dessertBuilder (JPanel panel_9, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
@@ -2030,6 +2046,8 @@ public class PanelBuilder {
 	
 	public void wineBuilder (JPanel panel_9, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
@@ -2287,6 +2305,8 @@ public class PanelBuilder {
 	
 	public void liquorBuilder (JPanel panel, DefaultListModel<String> DLM)
 	{
+		Init.finestraTavoliAttiva = false;
+		
 		ElementListener el = new ElementListener();
 		el.setDLM(DLM);
 		
