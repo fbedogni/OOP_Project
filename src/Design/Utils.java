@@ -106,14 +106,15 @@ public class Utils {
 		int counter;
 		double cost;
 		String c = "";
-		StringBuilder name;
+		String name;
+		String name2; 
 		String substring;
 		
 		for (int i=0; i<DLM.getSize(); ++i)
 		{		
 			
 			counter = this.getNumDLM(DLM.elementAt(i));
-			name = new StringBuilder (this.getNameDLM(DLM.elementAt(i), DLM.elementAt(i).length()));
+			name = this.getNameDLM(DLM.elementAt(i), DLM.elementAt(i).length());
 			
 			// estraggo il costo della stringa e faccio diviso counter per ottenere il costo unitario
 			
@@ -121,12 +122,15 @@ public class Utils {
 			cost = Double.parseDouble(c)/counter;
 			
 			for (int y=i+1; y<DLM.getSize(); ++y)
-				if (DLM.elementAt(y).contains(name))
+			{
+				name2 = this.getNameDLM(DLM.elementAt(y), DLM.elementAt(y).length());
+				if (name.equals(name2))
 				{
 					counter += this.getNumDLM(DLM.elementAt(y));
 					DLM.remove(y);
 					y--;
 				}
+			}
 			
 			substring = DLM.elementAt(i).substring(index);
 			

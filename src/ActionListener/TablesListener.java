@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import Design.Element;
 import Design.PanelBuilder;
 import Design.Update_Orders;
-import Prova.Converter;
+import test.Converter;
 import test.Ordine;
 
 public class TablesListener implements ActionListener{

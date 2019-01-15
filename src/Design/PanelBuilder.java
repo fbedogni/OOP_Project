@@ -70,15 +70,39 @@ public class PanelBuilder {
 		lblTavoliOccupati.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTavoliOccupati.setForeground(new Color(0, 255, 0));
 		lblTavoliOccupati.setBackground(Color.BLACK);
-		lblTavoliOccupati.setBounds(10, 15, 135, 16);
+		lblTavoliOccupati.setBounds(10, 20, 135, 16);
 		panel_2.add(lblTavoliOccupati);
+		
+		
+		JLabel label = new JLabel("[" + counter + "/24]");
+		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
+		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
+		// per tener traccia di quali tavoli sono occupati basta scorrere tutti i bottoni e contare quanti di essi hanno il colore tipico dei tavoli occupati
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		label.setBackground(new Color(0, 0, 0));
+		label.setForeground(new Color(0, 255, 0));
+		label.setOpaque(true);
+		label.setBounds(10, 50, 135, 18);
+		panel_2.add(label);
+		
+		Timers timer = new Timers();
+		JLabel time = new JLabel (timer.getTime());
+		time.setHorizontalAlignment(SwingConstants.CENTER);
+		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		time.setBackground(new Color(0, 0, 0));
+		time.setForeground(new Color(0, 255, 0));
+		time.setOpaque(true);
+		time.setBounds(10, 120, 135, 20);
+		panel_2.add(time);
+		
 		
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(0, 0, 0));
 		separator.setForeground(new Color(0, 255, 0));
-		separator.setBounds(10, 69, 135, 2);
+		separator.setBounds(10, 90, 135, 2);
 		panel_2.add(separator);
-		
+		/*
 		JLabel lblTotaleConti = new JLabel("Totale conti");
 		lblTotaleConti.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTotaleConti.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -100,7 +124,7 @@ public class PanelBuilder {
 		separator_1.setBounds(10, 132, 135, 2);
 		panel_2.add(separator_1);
 		
-		
+		*/
 		JPanel panel_4 = new JPanel();
 		panel_4.setBounds(68, 82, 951, 460);
 		panel_4.setBackground(new Color(255, 255, 240));
@@ -442,18 +466,7 @@ public class PanelBuilder {
 		else
 			btnNewButton_4.setBackground(new Color(100, 149, 237));
 		panel_4.add(btnNewButton_4);
-		
-		JLabel label = new JLabel("[" + counter + "/24]");
-		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
-		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
-		// per tener traccia di quali tavoli sono occupati basta scorrere tutti i bottoni e contare quanti di essi hanno il colore tipico dei tavoli occupati
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label.setBackground(new Color(0, 0, 0));
-		label.setForeground(new Color(0, 255, 0));
-		label.setOpaque(true);
-		label.setBounds(10, 42, 135, 16);
-		panel_2.add(label);
+	
 	}
 	
 	
@@ -502,15 +515,39 @@ public class PanelBuilder {
 		lblTavoliOccupati.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTavoliOccupati.setForeground(new Color(0, 255, 0));
 		lblTavoliOccupati.setBackground(Color.BLACK);
-		lblTavoliOccupati.setBounds(10, 15, 135, 16);
+		lblTavoliOccupati.setBounds(10, 20, 135, 16);
 		panel_2.add(lblTavoliOccupati);
+		
+		JLabel label = new JLabel("[" + counter + "/24]");
+		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
+		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
+		// per tener traccia di quali tavoli sono occupati basta scorrere tutti i bottoni e contare quanti di essi hanno il colore tipico dei tavoli occupati
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		label.setBackground(new Color(0, 0, 0));
+		label.setForeground(new Color(0, 255, 0));
+		label.setOpaque(true);
+		label.setBounds(10, 50, 135, 18);
+		panel_2.add(label);
+		
+		Timers timer = new Timers();
+		JLabel time = new JLabel (timer.getTime());
+		time.setHorizontalAlignment(SwingConstants.CENTER);
+		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		time.setBackground(new Color(0, 0, 0));
+		time.setForeground(new Color(0, 255, 0));
+		time.setOpaque(true);
+		time.setBounds(10, 120, 135, 20);
+		panel_2.add(time);
+		
 		
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(0, 0, 0));
 		separator.setForeground(new Color(0, 255, 0));
-		separator.setBounds(10, 69, 135, 2);
+		separator.setBounds(10, 90, 135, 2);
 		panel_2.add(separator);
 		
+		/*
 		JLabel lblTotaleConti = new JLabel("Totale conti");
 		lblTotaleConti.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTotaleConti.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -531,7 +568,7 @@ public class PanelBuilder {
 		separator_1.setForeground(new Color(0, 255, 0));
 		separator_1.setBounds(10, 132, 135, 2);
 		panel_2.add(separator_1);
-		
+		*/
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(138, 144, 703, 346);
 		panel_3.setBackground(new Color(255,255,240));
@@ -708,19 +745,6 @@ public class PanelBuilder {
 			btnNewButton_14.setBackground(new Color(100, 149, 237));
 		panel_3.add(btnNewButton_14);
 		
-		
-		
-		JLabel label = new JLabel("[" + counter + "/12]");
-		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
-		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
-		// per tener traccia di quali tavoli sono occupati basta scorrere tutti i bottoni e contare quanti di essi hanno il colore tipico dei tavoli occupati
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label.setBackground(new Color(0, 0, 0));
-		label.setForeground(new Color(0, 255, 0));
-		label.setOpaque(true);
-		label.setBounds(10, 42, 135, 16);
-		panel_2.add(label);
 	}
 	
 	
@@ -769,15 +793,38 @@ public class PanelBuilder {
 		lblTavoliOccupati.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTavoliOccupati.setForeground(new Color(0, 255, 0));
 		lblTavoliOccupati.setBackground(Color.BLACK);
-		lblTavoliOccupati.setBounds(10, 15, 135, 16);
+		lblTavoliOccupati.setBounds(10, 20, 135, 16);
 		panel_2.add(lblTavoliOccupati);
+		
+		JLabel label = new JLabel("[" + counter + "/24]");
+		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
+		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
+		// per tener traccia di quali tavoli sono occupati basta scorrere tutti i bottoni e contare quanti di essi hanno il colore tipico dei tavoli occupati
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		label.setBackground(new Color(0, 0, 0));
+		label.setForeground(new Color(0, 255, 0));
+		label.setOpaque(true);
+		label.setBounds(10, 50, 135, 18);
+		panel_2.add(label);
+		
+		Timers timer = new Timers();
+		JLabel time = new JLabel (timer.getTime());
+		time.setHorizontalAlignment(SwingConstants.CENTER);
+		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		time.setBackground(new Color(0, 0, 0));
+		time.setForeground(new Color(0, 255, 0));
+		time.setOpaque(true);
+		time.setBounds(10, 120, 135, 20);
+		panel_2.add(time);
+		
 		
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(0, 0, 0));
 		separator.setForeground(new Color(0, 255, 0));
-		separator.setBounds(10, 69, 135, 2);
+		separator.setBounds(10, 90, 135, 2);
 		panel_2.add(separator);
-		
+		/*
 		JLabel lblTotaleConti = new JLabel("Totale conti");
 		lblTotaleConti.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTotaleConti.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -798,7 +845,7 @@ public class PanelBuilder {
 		separator_1.setForeground(new Color(0, 255, 0));
 		separator_1.setBounds(10, 132, 135, 2);
 		panel_2.add(separator_1);
-		
+		*/
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(255, 255, 240));
 		panel_3.setBounds(0, 0, 1195, 729);
@@ -927,18 +974,6 @@ public class PanelBuilder {
 		else
 			button.setBackground(new Color(100, 149, 237));
 		panel_4.add(button);
-		
-		
-		JLabel label = new JLabel("[" + counter + "/8]");
-		// il testo di questo label lo si prende calcolando qunati tavoli presenti nella pagina sono occupati rispetto ai tavoli totali
-		// ogni pagina avrà un numero di tavoli diverso e un numero diverso di tavoli occupati, quindi quando si camba pagina bisogna aggiornare la label
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label.setBackground(new Color(0, 0, 0));
-		label.setForeground(new Color(0, 255, 0));
-		label.setOpaque(true);
-		label.setBounds(10, 42, 135, 16);
-		panel_2.add(label);
 		
 	}
 	
@@ -1470,14 +1505,14 @@ public class PanelBuilder {
 		
 		JLabel lblTavolo = new JLabel("Tavolo:");
 		lblTavolo.setForeground(new Color(0, 255, 0));
-		lblTavolo.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblTavolo.setBounds(10, 154, 61, 26);
+		lblTavolo.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblTavolo.setBounds(10, 164, 80, 26);
 		panel_5.add(lblTavolo);
 		
 		JLabel label_2 = new JLabel(tableNumber);
-		label_2.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 20));
+		label_2.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 25));
 		label_2.setForeground(new Color(0, 255, 0));
-		label_2.setBounds(156, 152, 73, 26);
+		label_2.setBounds(170, 164, 73, 26);
 		panel_5.add(label_2);
 		
 		JSeparator separator = new JSeparator();
@@ -1486,7 +1521,7 @@ public class PanelBuilder {
 		separator.setForeground(new Color(0, 255, 0));
 		separator.setBounds(10, 129, 459, 2);
 		panel_5.add(separator);
-		
+		/*
 		JLabel lblNewLabel = new JLabel("Orario apertura:");
 		lblNewLabel.setForeground(new Color(0, 255, 0));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -1500,7 +1535,7 @@ public class PanelBuilder {
 		label_3.setForeground(new Color(0, 255, 0));
 		label_3.setBounds(156, 190, 46, 26);
 		panel_5.add(label_3);
-		
+		*/
 		JPanel panel_6 = new JPanel();
 		panel_6.setBounds(105, 236, 374, 235);
 		panel_1.add(panel_6);
@@ -1544,7 +1579,7 @@ public class PanelBuilder {
 		btnNewButton_37.addActionListener(bl_modifica);
 		btnNewButton_37.setBackground(new Color(255, 69, 0));
 		btnNewButton_37.setFont(new Font("Times New Roman", Font.PLAIN, 23));
-		btnNewButton_37.setBounds(0, 111, 182, 136);
+		btnNewButton_37.setBounds(0, 11, 182, 235);
 		panel_7.add(btnNewButton_37);
 		
 		JPanel panel_8 = new JPanel();
@@ -1602,15 +1637,15 @@ public class PanelBuilder {
 		JButton btnNewButton_34 = new JButton("0");
 		btnNewButton_34.addActionListener(kl);
 		btnNewButton_34.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 27));
-		btnNewButton_34.setBounds(192, 190, 287, 57);
+		btnNewButton_34.setBounds(193, 190, 285, 55);
 		panel_7.add(btnNewButton_34);
-		
+		/*
 		JButton btnNewButton_38 = new JButton("Trasferisci tavolo");
 		btnNewButton_38.setFont(new Font("Times New Roman", Font.PLAIN, 18));
 		btnNewButton_38.setBackground(new Color(173, 255, 47));
 		btnNewButton_38.setBounds(0, 11, 182, 82);
 		panel_7.add(btnNewButton_38);
-		
+		*/
 		JButton btnNewButton_49 = new JButton("");
 		btnNewButton_49.setName("delete_row");
 		btnNewButton_49.setIcon(new ImageIcon(delete));

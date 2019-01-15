@@ -1,12 +1,10 @@
-package Prova;
+package test;
 
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
 
 import Design.Utils;
-import test.Ordine;
-import test.Prodotto;
 
 public class Converter {
 	
