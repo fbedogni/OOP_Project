@@ -14,13 +14,13 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.SoftBevelBorder;
 
-import Utils.Timers;
-import Utils.Utils;
 import actionListener.ButtonsListener;
 import actionListener.ElementListener;
 import actionListener.KeyboardListener;
 import actionListener.TablesListener;
 import design.Init;
+import utils.Timers;
+import utils.Utils;
 
 
 public class PanelBuilder {

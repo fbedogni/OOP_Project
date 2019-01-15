@@ -1,12 +1,12 @@
 package restManager;
 
-import Utils.Utils;
 import rest.HttpMethod;
 import rest.IRESTable;
 import rest.JSON;
 import rest.RESTResponse;
 import rest.Table;
 import rest.WebServer;
+import utils.Utils;
 
 public class RequestManager implements IRESTable {
 	private String response;

@@ -8,11 +8,11 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import Utils.Converter;
-import Utils.Ordine;
-import Utils.Update_Orders;
 import design.Element;
 import design.PanelBuilder;
+import utils.Converter;
+import utils.Ordine;
+import utils.Update_Orders;
 
 public class TablesListener implements ActionListener{
 

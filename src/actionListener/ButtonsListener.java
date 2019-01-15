@@ -12,16 +12,16 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Utils.Converter;
-import Utils.Ordine;
-import Utils.Timers;
-import Utils.Update_Orders;
-import Utils.Utils;
 import design.PanelBuilder;
 import design.Window;
 import rest.HttpMethod;
 import rest.Table;
 import rest.WebServer;
+import utils.Converter;
+import utils.Ordine;
+import utils.Timers;
+import utils.Update_Orders;
+import utils.Utils;
 
 public class ButtonsListener implements ActionListener{
 

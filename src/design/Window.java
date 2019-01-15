@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
-import Utils.Timers;
+import utils.Timers;
 
 
 // window è una classe di prova per testare i vari cambiamenti della finestra in seguito alla pressione di bottoni che inducono un cambiamento nella schermata
