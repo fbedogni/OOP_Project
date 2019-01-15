@@ -86,8 +86,7 @@ public class PanelBuilder {
 		label.setBounds(10, 50, 135, 18);
 		panel_2.add(label);
 		
-		Timers timer = new Timers();
-		JLabel time = new JLabel (timer.getTime());
+		JLabel time = new JLabel (Timers.getTime());
 		time.setHorizontalAlignment(SwingConstants.CENTER);
 		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		time.setBackground(new Color(0, 0, 0));
@@ -530,8 +529,7 @@ public class PanelBuilder {
 		label.setBounds(10, 50, 135, 18);
 		panel_2.add(label);
 		
-		Timers timer = new Timers();
-		JLabel time = new JLabel (timer.getTime());
+		JLabel time = new JLabel (Timers.getTime());
 		time.setHorizontalAlignment(SwingConstants.CENTER);
 		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		time.setBackground(new Color(0, 0, 0));
@@ -808,8 +806,7 @@ public class PanelBuilder {
 		label.setBounds(10, 50, 135, 18);
 		panel_2.add(label);
 		
-		Timers timer = new Timers();
-		JLabel time = new JLabel (timer.getTime());
+		JLabel time = new JLabel (Timers.getTime());
 		time.setHorizontalAlignment(SwingConstants.CENTER);
 		time.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		time.setBackground(new Color(0, 0, 0));

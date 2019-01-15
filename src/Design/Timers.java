@@ -71,7 +71,7 @@ public class Timers {
 		panel.repaint();
 	}
 
-	public String getTime() {
+	public static String getTime() {
 		// TODO Auto-generated method stub
 		return "15:10";
 	}
