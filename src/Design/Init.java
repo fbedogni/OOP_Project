@@ -18,7 +18,8 @@ import java.awt.event.ActionEvent;
 public class Init implements ActionListener {
 
 	private JFrame frame;
-	public static String USER;	
+	public static String USER;
+	public static boolean finestraTavoliAttiva;
 	JButton btnNewButton_0;
 	JButton btnNewButton_1;
 	JButton btnNewButton_2;
