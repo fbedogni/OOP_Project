@@ -1,4 +1,4 @@
-package utils;
+package Utils;
 
 import java.util.HashSet;
 import java.util.concurrent.*;
@@ -43,7 +43,7 @@ public class Timers {
 				update_5_sec();
 			}
 		};
-		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(table_update, 0, 5, TimeUnit.SECONDS);
+		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(table_update, 0, 2, TimeUnit.SECONDS);
 	}
 	
 	private void update_5_sec() {

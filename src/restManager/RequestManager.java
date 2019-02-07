@@ -6,7 +6,7 @@ import rest.JSON;
 import rest.RESTResponse;
 import rest.Table;
 import rest.WebServer;
-import utils.Utils;
+import Utils.Utils;
 
 public class RequestManager implements IRESTable {
 	private String response;

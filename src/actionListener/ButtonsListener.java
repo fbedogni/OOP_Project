@@ -17,11 +17,7 @@ import design.Window;
 import rest.HttpMethod;
 import rest.Table;
 import rest.WebServer;
-import utils.Converter;
-import utils.Ordine;
-import utils.Timers;
-import utils.Update_Orders;
-import utils.Utils;
+import Utils.*;
 
 public class ButtonsListener implements ActionListener{
 

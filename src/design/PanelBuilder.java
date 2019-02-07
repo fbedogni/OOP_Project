@@ -19,8 +19,7 @@ import actionListener.ElementListener;
 import actionListener.KeyboardListener;
 import actionListener.TablesListener;
 import design.Init;
-import utils.Timers;
-import utils.Utils;
+import Utils.*;
 
 
 public class PanelBuilder {
