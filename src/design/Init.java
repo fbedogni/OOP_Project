@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 
 public class Init implements ActionListener {
 
+	public static boolean checkConnection = false;
 	private JFrame frame;
 	public static String USER;
 	public static boolean finestraTavoliAttiva;
@@ -33,8 +34,6 @@ public class Init implements ActionListener {
 	JButton btnNewButton_10;
 	
 	JLabel lblNewLabel;
-	
-	Controller c = new Controller();
 
 	/**
 	 * Launch the application.
@@ -151,7 +150,7 @@ public class Init implements ActionListener {
 						}
 						
 							*/
-						
+						Controller c = new Controller();
 						c.control(lblNewLabel.getText());
 						
 						if (USER != null) 
@@ -159,6 +158,12 @@ public class Init implements ActionListener {
 							DataInitializer.getInstance();
 							new Window();
 							frame.setVisible(false);
+						}
+						
+						else if (checkConnection)
+						{
+							JOptionPane.showMessageDialog(frame, "Connessione internet assente","Errore",JOptionPane.WARNING_MESSAGE);
+							checkConnection = false;
 						}
 					    
 						else

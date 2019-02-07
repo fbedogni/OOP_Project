@@ -1,5 +1,7 @@
 package restManager;
 
+import javax.swing.JOptionPane;
+
 import design.Init;
 import rest.HttpMethod;
 import rest.IRESTable;
@@ -16,7 +18,8 @@ public class Controller implements IRESTable{
 	String id;
 	int indexBegin;
 	int indexEnd;
-	
+	int counter=0;
+
 	public void control (String id)
 	{
 		// accede alla tabella degli utenti nel database e controlla se il codice è presente o no
@@ -34,6 +37,9 @@ public class Controller implements IRESTable{
 		// se non trova nessun elemento restituisce "404"
 		
 		while (!check);
+		
+		if (Init.checkConnection==true)
+			return;
 		
 		if (response.equals("404"))
 			 Init.USER = null;
@@ -63,7 +69,22 @@ public class Controller implements IRESTable{
 	public void Error(RESTResponse response) {
 		
 		if (response.GetResponse().equals("ristogest.altervista.org"))
+		{
+			try {
+				Thread.sleep(3000);
+				counter++;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			if (counter == 2)
+			{
+				Init.checkConnection=true;
+				check = true;
+				return;
+			}
+			
 			this.Request();
+		}
 		else
 		{
 			this.response = "404";

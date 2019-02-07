@@ -7,13 +7,13 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import Utils.Utils;
 import restManager.BInit;
 import restManager.DInit;
 import restManager.LInit;
 import restManager.PInit;
 import restManager.SInit;
 import restManager.VInit;
+import utils.Utils;
 
 public class ElementListener implements ActionListener{
 	

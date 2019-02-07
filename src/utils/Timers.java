@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import java.util.HashSet;
 import java.util.concurrent.*;
@@ -40,13 +40,13 @@ public class Timers {
 	private void updater_initializer() {
 		final Runnable table_update = new Runnable() {
 			public void run() {
-				update_10_sec();
+				update_5_sec();
 			}
 		};
-		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(table_update, 0, 10, TimeUnit.SECONDS);
+		final ScheduledFuture<?> timerHandle = scheduler.scheduleAtFixedRate(table_update, 0, 5, TimeUnit.SECONDS);
 	}
 	
-	private void update_10_sec() {
+	private void update_5_sec() {
 		Update_Orders handler = new Update_Orders();
 		HashSet<Integer> lista_tavoli = handler.get_tavoli_attivi();
 		Window.active.clear();
