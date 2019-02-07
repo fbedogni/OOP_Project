@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import Utils.*;
+import utils.*;
 
 public class KeyboardListener implements ActionListener{
 

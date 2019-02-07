@@ -19,7 +19,7 @@ import actionListener.ElementListener;
 import actionListener.KeyboardListener;
 import actionListener.TablesListener;
 import design.Init;
-import Utils.*;
+import utils.*;
 
 
 public class PanelBuilder {

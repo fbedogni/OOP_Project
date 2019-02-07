@@ -17,7 +17,7 @@ import design.Window;
 import rest.HttpMethod;
 import rest.Table;
 import rest.WebServer;
-import Utils.*;
+import utils.*;
 
 public class ButtonsListener implements ActionListener{
 

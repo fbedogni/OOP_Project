@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 import design.Element;
 import design.PanelBuilder;
-import Utils.*;
+import utils.*;
 
 public class TablesListener implements ActionListener{
 
